@@ -55,6 +55,13 @@ After this the application can be accessed with http://localhost:4200/ as well w
     NOTE:- The àpplication may not behave as excepted if evolutions step explained above is not followed properly
 ```
 
+If you want to access the application with only http://localhost:9000/ then please follow below commands 
+
+```
+    ./sbt stage
+    ./sbt run
+```
+
 
 * Used any of the following [SBT](http://www.scala-sbt.org/) commands which will intern trigger frontend associated npm scripts.
 
