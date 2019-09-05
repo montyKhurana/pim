@@ -1,0 +1,31 @@
+.header {
+  background-color: #93208f;
+  color: white;
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-size: 94px;
+  font-weight: bold;
+}
+
+
+.product-editor {
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+.nav-item {
+  width: 100px;
+  height: 35px;
+  padding: 2px;
+  margin-left: 17px;
+}
+
+.is-active {
+  background-color: red;
+}

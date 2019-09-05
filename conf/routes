@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+GET     /products                   controllers.ProductController.getProducts
+GET     /details/:id                controllers.ProductController.getDetailsForProduct(id:Long)
+
+# Serve static assets under public directory
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+POST    /products                   controllers.ProductController.addProduct
+
+DELETE  /products/:id               controllers.ProductController.deleteProduct(id:Long)
+
+PUT     /products/:id                  controllers.ProductController.updateProduct(id:Long)
+
+
+
