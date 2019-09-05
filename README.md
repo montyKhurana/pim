@@ -23,6 +23,39 @@
 
 * Fork or clone this repository.
 
+* Set up empty postgresql database (as this app is using postgresql db by default). Then change the db related configurations in application.conf file which you can find in below path
+
+```
+    ├── /conf/
+    │     ├── application.conf
+```
+
+You will also find evolutions file in below path 
+
+```
+    ├── /conf/evolutions/default/
+    │     ├── 1.sql
+          ├── 2.sql            
+```
+
+These file are required for the app for persistence purposes 
+
+* When running the app with ./sbt run, the application can be accessed with two default urls
+
+```
+    http://localhost:9000/products   (Backend application which will list down the APIs by default)
+    http://localhost:4200/           (Frontend application)
+```
+
+Please load the application loaded the first time using  http://localhost:9000/ url as this will ask you to run those evolution scripts. After this the database will be ready with the tables and the application will be ready to use.
+
+After this the application can be accessed with http://localhost:4200/ as well without any issues.
+
+```
+    NOTE:- The àpplication may not behave as excepted if evolutions step explained above is not followed properly
+```
+
+
 * Used any of the following [SBT](http://www.scala-sbt.org/) commands which will intern trigger frontend associated npm scripts.
 
 ```
@@ -36,6 +69,8 @@
 
     sbt test            # Run both backend and frontend unit tests
 ```
+
+
 
 * This seed is not using [scala play views](https://www.playframework.com/documentation/2.6.x/ScalaTemplates). All the views and frontend associated routes are served via [Angular](https://angular.io/) code base under `ui` directory.
 
